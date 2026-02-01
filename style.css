@@ -1,0 +1,39 @@
+const textEl = document.getElementById("text");
+const imageEl = document.getElementById("image");
+const nextBtn = document.getElementById("nextBtn");
+const playBtn = document.getElementById("playBtn");
+const audio = document.getElementById("audio");
+
+const messages = [
+  "You know what I like the most?",
+  "Peaceful skies ☁️",
+  "Silent nights 🌙",
+  "And… you ❤️"
+];
+
+const images = [
+  "day.jpg",
+  "night.jpg",
+  "day.jpg",
+  "night.jpg"
+];
+
+let index = 0;
+
+nextBtn.addEventListener("click", () => {
+  index++;
+  textEl.textContent = messages[index % messages.length];
+  imageEl.src = images[index % images.length];
+
+  // small smooth fade effect
+  imageEl.style.opacity = 0;
+  setTimeout(() => {
+    imageEl.style.opacity = 1;
+  }, 200);
+});
+
+playBtn.addEventListener("click", () => {
+  audio.play();
+  playBtn.innerText = "🎶 Playing...";
+  playBtn.disabled = true; // improvement
+});
