@@ -1,0 +1,40 @@
+/* style.css */
+
+/* Body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background: #fdf6f0;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Image styling with smooth fade */
+#image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: opacity 0.5s ease-in-out; /* smooth fade effect */
+}
+
+/* Text styling with smooth fade */
+#text {
+  min-height: 60px;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  transition: opacity 0.3s ease-in-out; /* smooth fade for text */
+}
+
+/* Button styling */
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
